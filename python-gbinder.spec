@@ -5,7 +5,7 @@ Summary: Python bindings for libgbinder
 License: GPLv3
 Group: Development/Python
 URL: https://github.com/erfanoabdi/gbinder-python
-Source0: https://github.com/erfanoabdi/gbinder-python/archive/%{version}/%{name}-%{version}.tar.gz
+Source0: https://github.com/erfanoabdi/gbinder-python/archive/%{version}/gbinder-python-%{version}.tar.gz
 
 BuildRequires: pkgconfig(libgbinder)
 BuildRequires: pkgconfig(libglibutil)
@@ -23,7 +23,7 @@ One, use Cython's cythonize() function to generate a .c file from the .pyx one, 
 Two, if the .c is already provided, just compile it - no Cython required!
 
 %prep
-%autosetup -p1
+%autosetup -n gbinder-python-%{version} -p1
 
 %build
 %py_build -- --cython
