@@ -10,7 +10,7 @@ Source0: https://github.com/erfanoabdi/gbinder-python/archive/%{version}/gbinder
 BuildRequires: pkgconfig(libgbinder)
 BuildRequires: pkgconfig(libglibutil)
 BuildRequires: pkgconfig(python)
-BuildRequires: cython
+BuildRequires: python3dist(cython)
 
 %description
 There are two Cython files: cgbinder.pxd describing the C++ API of the libgbinder library, and gbinder.pyx describing classes that will be visible from Python user code. The .pyx imports .pxd to learn about C functions available to be called.
