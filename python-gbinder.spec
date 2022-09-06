@@ -32,4 +32,5 @@ Two, if the .c is already provided, just compile it - no Cython required!
 %py_install
 
 %files
-#{python_sitearch}/gbinder*
+%{python_sitearch}/gbinder_python-%{version}-py*.*.egg-info
+%{python_sitearch}/gbinder.cpython-*-*-linux-gnu.so
