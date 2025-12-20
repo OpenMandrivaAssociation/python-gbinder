@@ -1,6 +1,6 @@
 Name: python-gbinder
-Version: 1.1.1
-Release: 3
+Version: 1.3.0
+Release: 1
 Summary: Python bindings for libgbinder
 License: GPLv3
 Group: Development/Python
@@ -10,7 +10,7 @@ Source0: https://github.com/erfanoabdi/gbinder-python/archive/%{version}/gbinder
 BuildRequires: pkgconfig(libgbinder)
 BuildRequires: pkgconfig(libglibutil)
 BuildRequires: pkgconfig(python)
-BuildRequires: python3dist(cython)
+BuildRequires: python%{pyver}dist(cython)
 
 %description
 There are two Cython files: cgbinder.pxd describing the C++ API of the libgbinder library, and gbinder.pyx describing classes that will be visible from Python user code. The .pyx imports .pxd to learn about C functions available to be called.
