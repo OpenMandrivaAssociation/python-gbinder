@@ -11,6 +11,7 @@ BuildRequires: pkgconfig(libgbinder)
 BuildRequires: pkgconfig(libglibutil)
 BuildRequires: pkgconfig(python)
 BuildRequires: python%{pyver}dist(cython)
+BuildSystem:   python
 
 %description
 There are two Cython files: cgbinder.pxd describing the C++ API of the libgbinder library, and gbinder.pyx describing classes that will be visible from Python user code. The .pyx imports .pxd to learn about C functions available to be called.
@@ -22,14 +23,6 @@ There are two options to build the package:
 One, use Cython's cythonize() function to generate a .c file from the .pyx one, and then compile it against the libgbinder.so library.
 Two, if the .c is already provided, just compile it - no Cython required!
 
-%prep
-%autosetup -n gbinder-python-%{version} -p1
-
-%build
-%py_build -- --cython
-
-%install
-%py_install
 
 %files
 %{python_sitearch}/gbinder_python-%{version}-py*.*.egg-info
